@@ -49,20 +49,18 @@ The system demonstrates that even freestyle musical improvisation contains stabl
 
 ## Repository Structure
 
-/feature_extraction  
-MIDI preprocessing and behavioural feature engineering scripts  
+/Documentation
+Contains official IEEE report and presentation as well as a system diagram.
 
-/models  
-Training scripts for ensemble and stacked classifiers  
+/Code
+Contains main TrainAndTestModel.ipynb file for Training the models as well as testing their accuracy with additional performances, requirements file, final stacked dataset utilzied to train models (stacked_dataset.csv), as well as 6 test files to use while testing performance of the model.
 
-/inference  
-Scripts for predicting performer identity from new recordings  
+/Code/FeaturesAndDatasetStacker
+Contains all individual performances as pre-processed MIDI csv datasets (features 0-5) and a script which combines them into a single stacked csv dataset with userIDs (stacked_dataset.csv)
 
-/data  
-Raw MIDI recordings and processed CSV datasets  
+/Code/RawDataAndExtractionCode
+Contains 2 distinct raw performance datasets (recorded_piano 1 and 2) as an examples of the raw MIDI data acquired for this project, as well as the pre-processing script utilized to create the "features" csv datasets
 
-/outputs  
-Extracted feature datasets and model results  
 
 ---
 
@@ -103,17 +101,10 @@ git clone https://github.com/your-repo/midi-biometric-auth.git
 
 pip install -r requirements.txt
 
-### 3. Run Feature Extraction
+### 3. Install Anaconda and Jupyter Notebook
 
-python feature_extraction.py
+### 4. Run the Training and Testing ipynb file with sample data through Jupyter Notebook
 
-### 4. Train Models
-
-python train_models.py
-
-### 5. Run Inference
-
-python inference.py --file user_test.csv
 
 ---
 
