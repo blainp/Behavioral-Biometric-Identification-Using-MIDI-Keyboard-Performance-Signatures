@@ -48,19 +48,23 @@ The system demonstrates that even freestyle musical improvisation contains stabl
 ---
 
 ## Repository Structure
-
+```text
 /Documentation
 Contains official IEEE report and presentation as well as a system diagram.
 
 /Code
-Contains main TrainAndTestModel.ipynb file for Training the models as well as testing their accuracy with additional performances, requirements file, final stacked dataset utilzied to train models (stacked_dataset.csv), as well as 6 test files to use while testing performance of the model.
+Contains main TrainAndTestModel.ipynb file for Training the models as well as testing their accuracy with
+additional performances, requirements file, final stacked dataset utilzied to train models (stacked_dataset.csv),
+as well as 6 test files to use while testing performance of the model.
 
 /Code/FeaturesAndDatasetStacker
-Contains all individual performances as pre-processed MIDI csv datasets (features 0-5) and a script which combines them into a single stacked csv dataset with userIDs (stacked_dataset.csv)
+Contains all individual performances as pre-processed MIDI csv datasets (features 0-5) and a script which combines
+them into a single stacked csv dataset with userIDs (stacked_dataset.csv)
 
 /Code/RawDataAndExtractionCode
-Contains 2 distinct raw performance datasets (recorded_piano 1 and 2) as an examples of the raw MIDI data acquired for this project, as well as the pre-processing script utilized to create the "features" csv datasets
-
+Contains 2 distinct raw performance datasets (recorded_piano 1 and 2) as an examples of the raw MIDI data acquired
+for this project, as well as the pre-processing script utilized to create the "features" csv datasets
+```
 
 ---
 
