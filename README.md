@@ -95,7 +95,7 @@ The system evaluates multiple behavioural classification models using both split
 
 ### 1. Clone the Repository
 
-git clone https://github.com/your-repo/midi-biometric-auth.git
+git clone https://github.com/blainp/Behavioral-Biometric-Identification-Using-MIDI-Keyboard-Performance-Signatures/Code
 
 ### 2. Install Python Requirements
 
