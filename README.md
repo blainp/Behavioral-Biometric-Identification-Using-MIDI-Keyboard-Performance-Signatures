@@ -1,0 +1,148 @@
+# Behavioural Biometric Identification Using MIDI Keyboard Performance Signatures
+
+This repository contains the feature extraction pipeline, machine learning models, and inference system for a behavioural biometric authentication system based on MIDI keyboard performance data.
+
+---
+
+## Project Overview
+
+This project explores the identification of individual musicians using their unique performance signatures captured through MIDI data. Instead of relying on audio or vision-based approaches, the system analyzes keystroke-level behaviour such as timing, velocity, articulation, and pitch movement.
+
+Raw MIDI recordings are segmented into fixed time windows and transformed into engineered behavioural features. These features are then used to train multiple machine learning models to classify the performer behind each recording.
+
+The system demonstrates that even freestyle musical improvisation contains stable, identifiable behavioural patterns that can be used for user authentication.
+
+---
+
+## Features
+
+### MIDI-Based Behavioural Capture
+- Records raw MIDI performance data:
+  - Note timing
+  - Velocity (on/off)
+  - Duration
+  - Pitch information
+
+### Feature Engineering Pipeline
+- Extracts behavioural biometric features including:
+  - Rhythm and timing patterns (IOI, articulation)
+  - Dynamic expression (velocity trends)
+  - Pitch movement and range
+  - Polyphony and chord density
+  - Arpeggio and grace-note structure
+
+### Windowed Analysis System
+- Splits performances into fixed time windows (e.g., 15s segments)
+- Enables fine-grained behavioural modeling across time
+
+### Machine Learning Identification
+- Uses ensemble and stacked models:
+  - Voting classifiers
+  - PCA + Logistic Regression pipeline
+  - Stacking models (Random Forest + KNN → Logistic Regression)
+
+### Behavioural Inference System
+- Aggregates per-window predictions using probability averaging
+- Outputs final performer prediction with confidence scoring
+
+---
+
+## Repository Structure
+
+/feature_extraction  
+MIDI preprocessing and behavioural feature engineering scripts  
+
+/models  
+Training scripts for ensemble and stacked classifiers  
+
+/inference  
+Scripts for predicting performer identity from new recordings  
+
+/data  
+Raw MIDI recordings and processed CSV datasets  
+
+/outputs  
+Extracted feature datasets and model results  
+
+---
+
+## Dataset Pipeline
+
+1. MIDI recordings collected from multiple performers  
+2. Data segmented into fixed-length performance windows  
+3. Feature extraction applied per window  
+4. Individual datasets combined into a stacked dataset  
+5. Missing values cleaned and standardized  
+6. Dataset used for supervised classification (userID labels)
+
+---
+
+## Machine Learning Performance
+
+The system evaluates multiple behavioural classification models using both split testing and full-performance inference.
+
+### Performance Summary
+- High classification accuracy achieved on windowed test splits (~90%+ in controlled evaluation)
+- Strong generalization observed on unseen full-session recordings
+- Final predictions based on aggregated probability distributions across time windows
+
+### Evaluation Method
+- 80/20 stratified split for initial validation
+- Full-session inference for realistic performance testing
+- Confusion matrices and probability aggregation used for analysis
+
+---
+
+## Installation & Setup
+
+### 1. Clone the Repository
+
+git clone https://github.com/your-repo/midi-biometric-auth.git
+
+### 2. Install Python Requirements
+
+pip install -r requirements.txt
+
+### 3. Run Feature Extraction
+
+python feature_extraction.py
+
+### 4. Train Models
+
+python train_models.py
+
+### 5. Run Inference
+
+python inference.py --file user_test.csv
+
+---
+
+## Known Constraints & Future Improvements
+
+### Dataset Size
+The current dataset is limited in number of participants, which constrains generalization across a wider population.
+
+### Feature Expansion
+Future improvements could include:
+- Pedal usage modeling
+- Expressive timing micro-variation
+- Harmonic context awareness
+- Advanced sequence models (RNNs / Transformers)
+
+### Real-Time Deployment
+The system is currently offline. Future work includes:
+- Live MIDI authentication
+- Continuous user identification during performance
+- Real-time behavioural biometric systems
+
+---
+
+## References
+
+This project builds upon research in:
+- Behavioural biometrics in keystroke dynamics  
+- Music performance analysis using MIDI data  
+- Machine learning for performer identification  
+- Rhythm and expressive timing in musical style modeling  
+
+Additional references are included in the project report.
