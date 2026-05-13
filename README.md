@@ -99,11 +99,18 @@ The system evaluates multiple behavioural classification models using both split
 
 ### 1. Clone the Repository
 
-git clone https://github.com/blainp/Behavioral-Biometric-Identification-Using-MIDI-Keyboard-Performance-Signatures/Code
+```bash
+
+git clone https://github.com/blainp/Behavioral-Biometric-Identification-Using-MIDI-Keyboard-Performance-Signatures.git
+
+```
 
 ### 2. Install Python Requirements
 
+```bash
 pip install -r requirements.txt
+
+```
 
 ### 3. Install Anaconda and Jupyter Notebook
 
