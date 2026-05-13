@@ -1,3 +1,4 @@
+
 # Behavioural Biometric Identification Using MIDI Keyboard Performance Signatures
 
 This repository contains the feature extraction pipeline, machine learning models, and inference system for a behavioural biometric authentication system based on MIDI keyboard performance data.
@@ -11,7 +12,6 @@ This project explores the identification of individual musicians using their uni
 Raw MIDI recordings are segmented into fixed time windows and transformed into engineered behavioural features. These features are then used to train multiple machine learning models to classify the performer behind each recording.
 
 The system demonstrates that even freestyle musical improvisation contains stable, identifiable behavioural patterns that can be used for user authentication.
-
 ---
 
 ## Features
@@ -92,6 +92,9 @@ The system evaluates multiple behavioural classification models using both split
 - 80/20 stratified split for initial validation
 - Full-session inference for realistic performance testing
 - Confusion matrices and probability aggregation used for analysis
+<p align="center">
+<img width="1920" height="1080" alt="PianoBiometricChart" src="https://github.com/user-attachments/assets/656fd256-3dd5-4a4f-bc67-7f899706edb4" />
+</p>
 
 ---
 
