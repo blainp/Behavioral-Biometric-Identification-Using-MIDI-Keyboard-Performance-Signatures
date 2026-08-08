@@ -87,6 +87,7 @@ The system evaluates multiple behavioural classification models using both split
 - High classification accuracy achieved on windowed test splits (~90%+ in controlled evaluation)
 - Strong generalization observed on unseen full-session recordings
 - Final predictions based on aggregated probability distributions across time windows
+<img width="817" height="649" alt="image" src="https://github.com/user-attachments/assets/9565c92a-5830-40a3-99e4-d3669ced6307" />
 
 ### Evaluation Method
 - 80/20 stratified split for initial validation
