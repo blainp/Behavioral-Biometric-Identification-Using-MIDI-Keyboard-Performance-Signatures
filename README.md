@@ -97,7 +97,7 @@ The system evaluates multiple behavioural classification models using both split
 - A more realistic measure comes from evaluating on entirely unseen full performances: all models correctly identified the performer across all 7 test recordings, with a mean confidence of ~80% and a minimum of 65%
 - Correct identification held even when the primary subject intentionally varied their playing style across sessions, suggesting the system captures deeper motor/behavioural traits rather than surface-level style
 <p align="center">
- <img width="800" height="675" alt="Feature Importance (3)" src="https://github.com/user-attachments/assets/a99bdd42-1f46-4f0f-a73c-f10a7df79de6" />
+ <img width="800" height="600" alt="Feature Importance (3)" src="https://github.com/user-attachments/assets/a99bdd42-1f46-4f0f-a73c-f10a7df79de6" />
 </p>
 
 
