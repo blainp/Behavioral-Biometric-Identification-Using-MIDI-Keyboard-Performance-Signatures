@@ -10,9 +10,15 @@ This repository contains the feature extraction pipeline, machine learning model
 This project explores the identification of individual musicians using their unique performance signatures captured through MIDI data. Instead of relying on audio or vision-based approaches, the system analyzes keystroke-level behaviour such as timing, velocity, articulation, and pitch movement.
 
 Raw MIDI recordings are segmented into fixed time windows and transformed into engineered behavioural features. These features are then used to train multiple machine learning models to classify the performer behind each recording.
+<p align="center">
+<img width="1400" height="384" alt="image" src="https://github.com/user-attachments/assets/a36d9446-681e-41ec-9586-0407a3ce6564" />
+</p>
+
 
 The system demonstrates that even freestyle musical improvisation contains stable, identifiable behavioural patterns that can be used for user authentication.
 ---
+
+
 
 ## Features
 
@@ -87,16 +93,17 @@ The system evaluates multiple behavioural classification models using both split
 - High classification accuracy achieved on windowed test splits (~90%+ in controlled evaluation)
 - Strong generalization observed on unseen full-session recordings
 - Final predictions based on aggregated probability distributions across time windows
-<img width="817" height="649" alt="image" src="https://github.com/user-attachments/assets/9565c92a-5830-40a3-99e4-d3669ced6307" />
+<p align="center">
+ <img width="800" height="675" alt="Feature Importance (3)" src="https://github.com/user-attachments/assets/a99bdd42-1f46-4f0f-a73c-f10a7df79de6" />
+</p>
+
+
 
 ### Evaluation Method
 - 80/20 stratified split for initial validation
 - Full-session inference for realistic performance testing
 - Confusion matrices and probability aggregation used for analysis
-<p align="center">
-<img width="1478" height="384" alt="image" src="https://github.com/user-attachments/assets/a36d9446-681e-41ec-9586-0407a3ce6564" />
 
-</p>
 
 ---
 
