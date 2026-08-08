@@ -1,4 +1,4 @@
-# Behavioural Biometric Identification Using MIDI Keyboard Performance Signatures
+# Machine Learning Behavioural Biometric Identification Using MIDI Keyboard Performance Signatures
 
 This repository contains the feature extraction pipeline, machine learning models, and inference system for a behavioural biometric authentication system based on MIDI keyboard performance data.
 
