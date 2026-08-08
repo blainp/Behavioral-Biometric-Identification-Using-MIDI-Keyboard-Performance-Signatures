@@ -94,6 +94,8 @@ The system evaluates multiple behavioural classification models using both split
 - Confusion matrices and probability aggregation used for analysis
 <p align="center">
 <img width="1920" height="1080" alt="PianoBiometricChart" src="https://github.com/user-attachments/assets/656fd256-3dd5-4a4f-bc67-7f899706edb4" />
+<img width="582" height="1243" alt="image" src="https://github.com/user-attachments/assets/0ccee057-10fa-414b-8827-d148aa08c6e9" />
+
 </p>
 
 ---
