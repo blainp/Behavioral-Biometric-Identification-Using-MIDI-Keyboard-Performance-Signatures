@@ -1,7 +1,8 @@
-
 # Behavioural Biometric Identification Using MIDI Keyboard Performance Signatures
 
 This repository contains the feature extraction pipeline, machine learning models, and inference system for a behavioural biometric authentication system based on MIDI keyboard performance data.
+
+**Authors:** Blain Polishak, Aidan Evans
 
 ---
 
@@ -15,7 +16,7 @@ Raw MIDI recordings are segmented into fixed time windows and transformed into e
 </p>
 
 
-The system demonstrates that even freestyle musical improvisation contains stable, identifiable behavioural patterns that can be used for user authentication.
+The system demonstrates that freestyle musical improvisation contains stable, identifiable behavioural patterns that can be used for user authentication.
 ---
 
 
@@ -38,7 +39,7 @@ The system demonstrates that even freestyle musical improvisation contains stabl
   - Arpeggio and grace-note structure
 
 ### Windowed Analysis System
-- Splits performances into fixed time windows (e.g., 15s segments)
+- Splits performances into fixed time windows (30s segments)
 - Enables fine-grained behavioural modeling across time
 
 ### Machine Learning Identification
@@ -72,6 +73,8 @@ Contains 2 distinct raw performance datasets (recorded_piano 1 and 2) as an exam
 for this project, as well as the pre-processing script utilized to create the "features" csv datasets
 ```
 
+For full methodology, literature review, and figures, see the IEEE report in `/Documentation`.
+
 ---
 
 ## Dataset Pipeline
@@ -90,9 +93,9 @@ for this project, as well as the pre-processing script utilized to create the "f
 The system evaluates multiple behavioural classification models using both split testing and full-performance inference.
 
 ### Performance Summary
-- High classification accuracy achieved on windowed test splits (~90%+ in controlled evaluation)
-- Strong generalization observed on unseen full-session recordings
-- Final predictions based on aggregated probability distributions across time windows
+- 80/20 stratified split cross-validation yielded 94.87% (Models 1 & 2) and 92.31% (Model 3) accuracy, however, these figures are likely inflated, since segments from the same recording session can appear in both train and test sets
+- A more realistic measure comes from evaluating on entirely unseen full performances: all models correctly identified the performer across all 7 test recordings, with a mean confidence of ~80% and a minimum of 65%
+- Correct identification held even when the primary subject intentionally varied their playing style across sessions, suggesting the system captures deeper motor/behavioural traits rather than surface-level style
 <p align="center">
  <img width="800" height="675" alt="Feature Importance (3)" src="https://github.com/user-attachments/assets/a99bdd42-1f46-4f0f-a73c-f10a7df79de6" />
 </p>
@@ -134,7 +137,7 @@ pip install -r requirements.txt
 ## Known Constraints & Future Improvements
 
 ### Dataset Size
-The current dataset is limited in number of participants, which constrains generalization across a wider population.
+The current dataset is limited to 5 participants, which constrains generalization across a wider population.
 
 ### Feature Expansion
 Future improvements could include:
